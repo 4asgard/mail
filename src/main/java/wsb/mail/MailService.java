@@ -22,6 +22,7 @@ public class MailService {
             mimeMessageHelper.setTo(mail.recipient);
             mimeMessageHelper.setTo(mail.subject);
             mimeMessageHelper.setTo(mail.content);
+            mimeMessageHelper.addAttachment(mail.attachment.getOriginalFilename(), mail.attachment);
 
             javaMailSender.send(mimeMessage);
 

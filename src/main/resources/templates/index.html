@@ -10,7 +10,7 @@
 
 <div class="container mt-3">
 
-    <form action="/mails" method="post">
+    <form action="/mails" method="post" enctype="multipart/form-data">
 
         <div class="row form-group mb-2">
             <div class="col-sm-3">Odbiorca</div>
@@ -30,6 +30,13 @@
             <div class="col-sm-3">Treść</div>
             <div class="col-sm-9">
                 <textarea rows="10" name="content" class="form-control"></textarea>
+            </div>
+        </div>
+
+        <div class="row form-group mb-2">
+            <div class="col-sm-3">Załącznik</div>
+            <div class="col-sm-9">
+                <input type="file" name="attachment" class="form-control-file">
             </div>
         </div>
 
